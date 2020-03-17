@@ -25,9 +25,9 @@ th, td, p, li { text-align: left; }
 #date { text-align: right; }
 
 h1 { font-size: 1.4rem; line-height: 1.4rem; }
-h2 { font-size: 1rem; line-height: 1.1rem; }
-th, td, p, li { font-size: 1.1rem; line-height: 1.15rem; }
-#date { font-size: 1rem; line-height: 1rem; }
+h2 { font-size: 1.05rem; line-height: 1.1rem; }
+th, td, p, li { font-size: 1.1rem; line-height: 1.2rem; }
+#date { font-size: 1.05rem; line-height: 1.1rem; }
 sup { vertical-align: top; position: relative; top: -0.2rem; }
 
 h1 { font-weight: 700; }
@@ -38,6 +38,7 @@ td, #date { font-weight: 400; }
 h1 { margin: 1rem; }
 h2 { margin-bottom: 2rem; }
 th, td { padding-bottom: 1rem; }
+table { margin-bottom: 1rem; }
 p, li { margin-bottom: 1rem; }
 #date { margin-top: 3rem; }
 
