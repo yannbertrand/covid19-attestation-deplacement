@@ -57,3 +57,7 @@ label input {
   margin-right: 1rem;
   margin-left: -2.2rem;
 }
+
+em {
+  text-decoration: underline dotted;
+}
