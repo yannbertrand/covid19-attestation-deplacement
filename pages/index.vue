@@ -62,7 +62,7 @@ export default {
     if (this.lieu.length === 0) { this.lieu = 'Lyon' }
   },
   computed: {
-    date: () => (new Date()).toLocaleDateString(),
+    date: () => (new Date()).toLocaleDateString('fr-FR'),
   },
   methods: {
     demander(champ, phrase) {
