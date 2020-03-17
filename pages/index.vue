@@ -56,7 +56,7 @@ export default {
     if (this.nom.length === 0) { this.nom = 'Faustin R Rivière' }
     if (this.naissance.length === 0) { this.naissance = '12/01/1986' }
     if (this.adresse.length === 0) {
-      this.adresse = `74  rue Petite Fusterie
+      this.adresse = `74 rue Petite Fusterie
 38300 Bourgoin-Jallieu`
     }
     if (this.lieu.length === 0) { this.lieu = 'Lyon' }
