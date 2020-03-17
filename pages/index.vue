@@ -6,9 +6,9 @@ déplacements dans le cadre de la lutte contre la propagation du virus Covid-19 
 
     <p>Je soussigné(e)</p>
     <table>
-      <tr @click="demander('nom')"><th>Mme / M.</th><td><em>{{ this.nom }}</em></td></tr>
-      <tr @click="demander('naissance')"><th>Né(e) le :</th><td><em>{{ this.naissance }}</em></td></tr>
-      <tr @click="demander('adresse')"><th>Demeurant :</th><td><em>{{ this.adresse }}</em></td></tr>
+      <tr @click="demander('nom', 'votre nom')"><th>Mme / M.</th><td><em>{{ this.nom }}</em></td></tr>
+      <tr @click="demander('naissance', 'votre date de naissance')"><th>Né(e) le :</th><td><em>{{ this.naissance }}</em></td></tr>
+      <tr @click="demander('adresse', 'votre adresse')"><th>Demeurant :</th><td><em>{{ this.adresse }}</em></td></tr>
     </table>
     <p>certifie que mon déplacement est lié au motif suivant (cocher la case) autorisé par
 l’article 1<sup>er</sup> du décret du 16 mars 2020 portant réglementation des déplacements dans
@@ -28,7 +28,7 @@ des personnes, à l’exclusion de toute pratique sportive collective, et aux be
 des animaux de compagnie.</label></li>
     </ul>
 
-    <p id="date" @click="demander('lieu')">Fait à <em>{{ this.lieu }}</em> le <em>{{ this.date }}</em></p>
+    <p id="date" @click="demander('lieu', 'votre lieu de résidence')">Fait à <em>{{ this.lieu }}</em> le <em>{{ this.date }}</em></p>
   </div>
 </template>
 
@@ -47,8 +47,8 @@ export default {
     date: () => (new Date()).toLocaleDateString(),
   },
   methods: {
-    demander(champ) {
-      const valeur = prompt(`Entrez un ${champ}`, this[champ])
+    demander(champ, phrase) {
+      const valeur = prompt(`Entrez ${phrase}`, this[champ])
       if (valeur?.length > 0) {
         this[champ] = valeur
       }
