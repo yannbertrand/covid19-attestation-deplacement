@@ -1,72 +1,50 @@
 <template>
-  <div class="container">
-    <div>
-      <logo />
-      <h1 class="title">
-        covid19-attestation-deplacement
-      </h1>
-      <h2 class="subtitle">
-        Génération d&#39;attestation de déplacement à la volée
-      </h2>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
-    </div>
+  <div>
+    <h1>ATTESTATION DE DÉPLACEMENT DÉROGATOIRE</h1>
+    <h2>En application de l’article 1er du décret du 16 mars 2020 portant réglementation des
+déplacements dans le cadre de la lutte contre la propagation du virus Covid-19 :</h2>
+
+    <p>Je soussigné(e)</p>
+    <table>
+      <tr><th>Mme / M.</th><td><em>{{ this.nom }}</em></td></tr>
+      <tr><th>Né(e) le :</th><td><em>{{ this.naissance }}</em></td></tr>
+      <tr><th>Demeurant :</th><td><em>{{ this.adresse }}</em></td></tr>
+    </table>
+    <p>certifie que mon déplacement est lié au motif suivant (cocher la case) autorisé par
+l’article 1<sup>er</sup> du décret du 16 mars 2020 portant réglementation des déplacements dans
+le cadre de la lutte contre la propagation du virus Covid-19 :</p>
+    <ul>
+      <li><label for="professionnel"><input type="checkbox" id="professionnel"> déplacements entre le domicile et le lieu d’exercice de l’activité professionnelle,
+lorsqu’ils sont indispensables à l’exercice d’activités ne pouvant être organisées
+sous forme de télétravail (sur justificatif permanent) ou déplacements
+professionnels ne pouvant être différés ;</label></li>
+      <li><label for="achat"><input type="checkbox" id="achat"> déplacements pour effectuer des achats de première nécessité dans des
+établissements autorisés (liste sur gouvernement.fr);</label></li>
+      <li><label for="sante"><input type="checkbox" id="sante"> déplacements pour motif de santé;</label></li>
+      <li><label for="famille"><input type="checkbox" id="famille"> déplacements pour motif familial impérieux, pour l’assistance aux personnes
+vulnérables ou la garde d’enfants ;</label></li>
+      <li><label for="sport"><input type="checkbox" id="sport"> déplacements brefs, à proximité du domicile, liés à l’activité physique individuelle
+des personnes, à l’exclusion de toute pratique sportive collective, et aux besoins
+des animaux de compagnie.</label></li>
+    </ul>
+
+    <p id="date">Fait à <em>{{ this.lieu }}</em> le <em>{{ this.date }}</em></p>
   </div>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
-
 export default {
-  components: {
-    Logo
+  data() {
+    return {
+      nom: 'Faustin R Rivière',
+      naissance: '12/01/1986',
+      adresse: `74  rue Petite Fusterie
+38300 Bourgoin-Jallieu`,
+      lieu: 'Lyon',
+    }
+  },
+  computed: {
+    date: () => (new Date()).toLocaleDateString(),
   }
 }
 </script>
-
-<style>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
-}
-</style>
