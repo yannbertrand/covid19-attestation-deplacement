@@ -33,15 +33,33 @@ des animaux de compagnie.</label></li>
 </template>
 
 <script>
+const hasLocalStorage = typeof localStorage !== 'undefined'
+
 export default {
   data() {
     return {
-      nom: 'Faustin R Rivière',
-      naissance: '12/01/1986',
-      adresse: `74  rue Petite Fusterie
-38300 Bourgoin-Jallieu`,
-      lieu: 'Lyon',
+      nom: '',
+      naissance: '',
+      adresse: '',
+      lieu: '',
     }
+  },
+  created() {
+    if (hasLocalStorage) {
+      this.nom = localStorage.getItem('nom') || ''
+      this.naissance = localStorage.getItem('naissance') || ''
+      this.adresse = localStorage.getItem('adresse') || ''
+      this.lieu = localStorage.getItem('lieu') || ''
+    }
+  },
+  beforeMount() {
+    if (this.nom.length === 0) { this.nom = 'Faustin R Rivière' }
+    if (this.naissance.length === 0) { this.naissance = '12/01/1986' }
+    if (this.adresse.length === 0) {
+      this.adresse = `74  rue Petite Fusterie
+38300 Bourgoin-Jallieu`
+    }
+    if (this.lieu.length === 0) { this.lieu = 'Lyon' }
   },
   computed: {
     date: () => (new Date()).toLocaleDateString(),
@@ -51,6 +69,9 @@ export default {
       const valeur = prompt(`Entrez ${phrase}`, this[champ])
       if (valeur?.length > 0) {
         this[champ] = valeur
+        if (hasLocalStorage) {
+          localStorage.setItem(champ, valeur)
+        }
       }
     }
   }
