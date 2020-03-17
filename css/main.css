@@ -14,14 +14,19 @@ body {
   height: 100%;
   padding: 4rem 3rem;
 }
+@media (max-width: 699px) {
+  #content {
+    padding: 3rem 1rem;
+  }
+}
 
 h1, h2 { text-align: center; }
 th, td, p, li { text-align: left; }
 #date { text-align: right; }
 
 h1 { font-size: 1.4rem; line-height: 1.4rem; }
-h2 { font-size: 1rem; line-height: 1rem; }
-th, td, p, li { font-size: 1.1rem; line-height: 1.1rem; }
+h2 { font-size: 1rem; line-height: 1.1rem; }
+th, td, p, li { font-size: 1.1rem; line-height: 1.15rem; }
 #date { font-size: 1rem; line-height: 1rem; }
 sup { vertical-align: top; position: relative; top: -0.2rem; }
 
