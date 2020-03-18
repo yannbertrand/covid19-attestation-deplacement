@@ -2,6 +2,8 @@
 
 > Génération d&#39;attestation de déplacement à la volée
 
+/!\ Le ministère de l'intérieur a confirmé que les attestations numériques ne sont pas valides : https://twitter.com/Place_Beauvau/status/1240236276416118784
+
 ## Build Setup
 
 ```bash
