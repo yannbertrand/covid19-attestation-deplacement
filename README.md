@@ -2,7 +2,7 @@
 
 > Génération d'attestation de déplacement à la volée
 
-:warning: Utilisez [la version officielle](https://media.interieur.gouv.fr/deplacement-covid-19/) disponible depuis mi-août !
+:warning: Utilisez [la version officielle](https://media.interieur.gouv.fr/deplacement-covid-19/) disponible depuis mi-avril !
 
 ## Build Setup
 
