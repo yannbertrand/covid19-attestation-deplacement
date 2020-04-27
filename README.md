@@ -1,8 +1,8 @@
 # covid19-attestation-deplacement
 
-> Génération d&#39;attestation de déplacement à la volée
+> Génération d'attestation de déplacement à la volée
 
-/!\ Le ministère de l'intérieur a confirmé que les attestations numériques ne sont pas valides : https://twitter.com/Place_Beauvau/status/1240236276416118784
+:warning: Utilisez [la version officielle](https://media.interieur.gouv.fr/deplacement-covid-19/) disponible depuis mi-août !
 
 ## Build Setup
 
